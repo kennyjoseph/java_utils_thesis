@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin:'application'
+
+mainClassName = "StreamSampler.examples.SimpleKeywordsAndUserFromFile"
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.+'
+    }
+}
+
+dependencies {
+    compile 'com.google.code.gson:gson:2.3'
+    compile 'org.mongodb:mongo-java-driver:2.12.3'
+    compile 'com.twitter:hbc-core:2.2.0'
+    compile 'org.apache.commons:commons-lang3:3.3.2'
+}
+
+apply plugin: 'com.github.johnrengelman.shadow'

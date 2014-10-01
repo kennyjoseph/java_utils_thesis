@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin:'application'
+
+mainClassName = "DependencyParsing.ParseNewspapers"
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.+'
+    }
+}
+
+dependencies {
+    compile 'edu.stanford.nlp:stanford-corenlp:3.4.1'
+    compile files('libs/stanford-corenlp-3.4.1-models.jar')
+    compile files('libs/stanford-srparser-2014-08-28-models.jar')
+}
+
+apply plugin: 'com.github.johnrengelman.shadow'

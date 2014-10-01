@@ -1,0 +1,11 @@
+.gradle/
+.idea/
+ark_nlp_tagger/libs/
+build/
+*/build/
+java_code.iml
+java4.iml
+gradle/
+gradlew
+gradlew.bat
+dependency_parsing/libs/
