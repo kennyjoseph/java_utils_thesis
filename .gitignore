@@ -3,7 +3,7 @@
 ark_nlp_tagger/libs/
 build/
 */build/
-java_code.iml
+*.iml
 java4.iml
 gradle/
 gradlew

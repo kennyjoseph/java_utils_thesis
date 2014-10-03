@@ -28,6 +28,12 @@
     <orderEntry type="library" exported="" name="Gradle: xml-apis-2.0.2" level="project" />
     <orderEntry type="library" exported="" name="Gradle: stanford-corenlp-3.4.1-models" level="project" />
     <orderEntry type="library" exported="" name="Gradle: stanford-srparser-2014-08-28-models" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: jackson-core-asl-1.9.13" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: guava-18.0" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: antlr-2.7.7" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: myutil" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: commons-io-1.3.2" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: commons-io-1.3.2" level="project" />
   </component>
 </module>
 
