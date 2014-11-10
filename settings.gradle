@@ -1,4 +1,3 @@
 rootProject.name = 'java4'
 
 include ':tweet_stream_sampling', ':ark_nlp_tagger', ':dependency_parsing'
-

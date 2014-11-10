@@ -233,7 +233,7 @@ public class Sentence {
         for(Token t : tokens){
             lemmaStrings.add(t.lemma);
         }
-        Set<Integer> seenMentionHeads = new HashSet<>();
+
         for( Dep nsubjDependency : nsubjDependencies){
             if(!isNominal(nsubjDependency.child-1)){
                 continue;
@@ -265,7 +265,12 @@ public class Sentence {
                                 fromToken + " " + fullVerb + " " + toToken);
                     }
 
-                    simpleDependencies.add(new SimpleDependency(docidStr, sentidStr,fromToken,fullVerb,toToken));
+                    simpleDependencies.add(
+                            new SimpleDependency(docidStr, sentidStr,
+                                    fromToken,fullVerb,toToken,
+                                    tokens.get(nsubjDependency.child-1).lemma,
+                                    tokens.get(nsubjDependency.gov-1).lemma,
+                                    tokens.get(childDep.child-1).lemma));
                 }
             }
 

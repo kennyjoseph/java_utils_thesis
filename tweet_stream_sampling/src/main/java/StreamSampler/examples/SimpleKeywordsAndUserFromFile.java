@@ -24,14 +24,15 @@ public class SimpleKeywordsAndUserFromFile {
         for(String a : args){
             System.out.println(a);
         }
-        if(args.length != 3){
-            System.out.println("Usage: [userFile] [keywordFile] [durationInMinutes]");
+        if(args.length != 4){
+            System.out.println("Usage: [userFile] [keywordFile] [mongodb_and_output_folder_name] [durationInMinutes]");
             System.exit(-1);
         }
 
         String userFile = args[0];
         String keywordFile = args[1];
-        Long duration = Long.valueOf(args[2]);
+        String mongodbName = args[2];
+        Long duration = Long.valueOf(args[3]);
 
         //on each line of the config file, you have:
         //username,consumer_key,consumer_secret,access_token,access_token_secret
@@ -47,8 +48,8 @@ public class SimpleKeywordsAndUserFromFile {
             Sampler s = new KeywordsFromFileSampler(
                                 validUsers.get(0),
                                 mongoClient,
-                                "will_output",
-                                "nuclear",
+                                mongodbName,
+                                mongodbName,
                                 "tweets",
                                 keywordFile);
             s.start();

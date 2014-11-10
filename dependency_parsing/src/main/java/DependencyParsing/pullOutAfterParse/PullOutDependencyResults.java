@@ -36,9 +36,7 @@ public class PullOutDependencyResults implements Runnable {
                 Sentence s = new Sentence(docId, sentenceId, line, true);
                 sentenceId++;
                 for(SimpleDependency sd : s.getSimpleDependencies()){
-                    if(mIdentities.contains(sd.governingTerm) |
-                            mIdentities.contains(sd.childTerm) |
-                            mBehaviors.contains(sd.relationshipTerm)) {
+                    if(sd.foundIn(mIdentities,mBehaviors)) {
                         simpleDependencies.add(sd);
                     }
                 }
@@ -47,12 +45,7 @@ public class PullOutDependencyResults implements Runnable {
             if(!simpleDependencies.isEmpty()){
                 BufferedWriter writer = new BufferedWriter(new FileWriter(mOutputDirectory+"/"+docId));
                 for(SimpleDependency sd : simpleDependencies){
-                        writer.write(StringUtils.join(Arrays.asList(
-                                sd.docId,
-                                sd.sentenceId,
-                                sd.governingTerm,
-                                sd.relationshipTerm,
-                                sd.childTerm), "\t") + "\n");
+                    writer.write(sd.getString()+ "\n");
                 }
                 writer.close();
             }
