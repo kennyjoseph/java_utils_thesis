@@ -1,6 +1,8 @@
 apply plugin: 'java'
 apply plugin:'application'
 
+mainClassName = "Wikipedia.WikiTest"
+
 buildscript {
     repositories {
         jcenter()
@@ -12,6 +14,7 @@ buildscript {
 }
 
 dependencies {
+    compile 'de.tudarmstadt.ukp.wikipedia:de.tudarmstadt.ukp.wikipedia.api:1.0.0'
     compile 'com.google.code.gson:gson:2.3'
 }
 

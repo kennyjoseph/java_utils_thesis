@@ -1,3 +1,4 @@
-rootProject.name = 'java4'
+rootProject.name = 'java_utils_thesis'
 
-include ':tweet_stream_sampling', ':ark_nlp_tagger', ':dependency_parsing'
+include ':tweet_stream_sampling', ':ark_nlp_tagger', ':dependency_parsing', ':wikipedia'
+

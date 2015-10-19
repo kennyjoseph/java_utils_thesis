@@ -1,7 +1,4 @@
-apply plugin: 'java'
-apply plugin:'application'
 
-mainClassName = "ArkNLPTagging.CustomTagCode"
 
 buildscript {
     repositories {
@@ -18,5 +15,10 @@ dependencies {
     compile 'com.carrotsearch:langid-java:1.0.0'
     compile files('libs/ark-tweet-nlp-0.3.2.jar')
 }
+
+apply plugin: 'java'
+apply plugin:'application'
+
+mainClassName = "ArkNLPTagging.RunIdentityExtractOrPOSTagger"
 
 apply plugin: 'com.github.johnrengelman.shadow'

@@ -9,3 +9,4 @@ gradle/
 gradlew
 gradlew.bat
 dependency_parsing/libs/
+.DS_Store
